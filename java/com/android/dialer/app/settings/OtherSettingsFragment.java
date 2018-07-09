@@ -25,6 +25,7 @@ import android.preference.PreferenceManager;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.dialer.app.R;
+import com.android.dialer.callrecord.impl.CallRecorderService;
 
 public class OtherSettingsFragment extends PreferenceFragment
     implements Preference.OnPreferenceChangeListener {
@@ -52,6 +53,10 @@ public class OtherSettingsFragment extends PreferenceFragment
     mEnablePostcall.setChecked(mEnabled);
     mEnablePostcall.setOnPreferenceChangeListener(this);
 
+    if (!CallRecorderService.isEnabled(getActivity())) {
+      getPreferenceScreen().removePreference(
+          findPreference(context.getString(R.string.call_recording_category_key)));
+    }
   }
 
   @Override
