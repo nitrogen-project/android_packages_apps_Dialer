@@ -30,4 +30,5 @@
     <string name="a11y_description_incall_label_manage_content" msgid="8298638893449287602">"Управление абонентами"</string>
     <string name="incall_label_swap" msgid="10458642864243507">"Переключить"</string>
     <string name="incall_note_sent" msgid="4524130323127388367">"Сообщение отправлено"</string>
+    <string name="incall_label_swap_sim">Сменить SIM</string>
 </resources>
